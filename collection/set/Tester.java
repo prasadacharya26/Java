@@ -4,7 +4,7 @@ import java.util.*;
 
 import com.wolken.exception_handling.list.task.Gun;
 
-public class Tester implements Comparable<AmusementPark>{
+public class Tester{
 	 static Scanner sc=new Scanner(System.in);
 	 static Set<AmusementPark> treeSet=new TreeSet<AmusementPark>();
 	 int id;
@@ -17,7 +17,7 @@ public class Tester implements Comparable<AmusementPark>{
 	
 	void display() {
 		System.out.println("Name\t\tCity\t\tState\t\tRating\tPhone\t\tPool");
-		System.out.println("-------------------------------------------------------------------");
+		System.out.println("------------------------------------------------------------------------------");
 		for(AmusementPark parks:treeSet) {
 			String name=parks.getName();
 			String city=parks.getCity();
@@ -31,7 +31,7 @@ public class Tester implements Comparable<AmusementPark>{
 	
 	void displayOne(String name) {
 		System.out.println("Name\t\tCity\t\tState\t\tRating\tPhone\t\tPool");
-		System.out.println("-------------------------------------------------------------------");
+		System.out.println("-----------------------------------------------------------------------------");
 		for(AmusementPark parks:treeSet) {
 			if(parks.getName().equals(name)) {
 				String pname=parks.getName();
@@ -51,8 +51,6 @@ public class Tester implements Comparable<AmusementPark>{
 	boolean update(String name) {
 		for(AmusementPark park:treeSet) {
 			if(park.getName().equals(name)) {
-				System.out.println("Enter park name:");
-				String pname=sc.nextLine();
 				System.out.println("Enter park city:");
 				String city=sc.nextLine();
 				System.out.println("Enter park state:");
@@ -64,13 +62,11 @@ public class Tester implements Comparable<AmusementPark>{
 				System.out.println("Enter park number of pool:");
 				byte pool=sc.nextByte();
 				
-				park.setName(pname);
 				park.setCity(city);
 				park.setState(state);
 				park.setRating(rating);
 				park.setPhone(phone);
 				park.setPool(pool);
-				//linked.set(linked.indexOf(gun), gun);
 				return true;
 			}
 		}
@@ -132,7 +128,7 @@ public class Tester implements Comparable<AmusementPark>{
 				test.save(park);
 			}
 			else if(ch==2) {
-				Set<AmusementPark> tree = new TreeSet();
+				Set<AmusementPark> tree = new TreeSet<AmusementPark>();
 				System.out.println("Enter number of elements");
 				byte num=sc.nextByte();
 				for(int i=0;i<num;i++) {
@@ -205,9 +201,4 @@ public class Tester implements Comparable<AmusementPark>{
 			ans=sc.next();
 		}while(ans.equals(ans));
 	}
-
-	@Override
-	public int compareTo(AmusementPark park) {
-		return Integer.compare(this.id, park.id);
-	}	
 }

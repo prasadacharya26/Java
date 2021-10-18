@@ -1,7 +1,7 @@
 package com.wolken.exception_handling.set;
 
-public class AmusementPark {
-	public static final int id = 0;
+public class AmusementPark implements Comparable<AmusementPark>{
+	
 	private String name;
 	private String city;
 	private String state;
@@ -44,5 +44,9 @@ public class AmusementPark {
 	}
 	public void setPool(byte pool) {
 		this.pool = pool;
+	}
+	@Override
+	public int compareTo(AmusementPark o) {
+		return Byte.compare(this.pool,o.pool);
 	}
 }
