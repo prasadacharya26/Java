@@ -71,7 +71,7 @@ public class Tester {
 				gun.setPrice(price);
 				gun.setNoOfBullets(noOfBullets);
 				gun.setRange(range);
-				linked.set(linked.indexOf(gun), gun);
+				//linked.set(linked.indexOf(gun), gun);
 				return true;
 			}
 		}
