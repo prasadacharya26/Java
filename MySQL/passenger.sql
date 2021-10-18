@@ -5,6 +5,8 @@ p_contact long,
 p_address varchar(45),
 a_id int, foreign key(a_id) references airport_details(id));
 
+insert into passenger value(5,"raj",9945025999,"chennai",3);
+
 insert into passenger values
 (1,"prasad",8197192003,"udupi",2),
 (2,"sanath",8197192045,"mangalore",3),

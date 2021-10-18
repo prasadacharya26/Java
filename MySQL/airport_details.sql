@@ -12,6 +12,7 @@ select * from airport_details where id = 2;
 select * from airport_details group by name;
 
 update airport_details set name = "mangalore" where id = 3;
+update airport_details set name="Madras International Meenambakkam", place = "chennai" where id = 3;
 
 delete from airport_details where id = 3;
 
