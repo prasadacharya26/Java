@@ -5,6 +5,8 @@ create table airport_details(id int primary key not null, name varchar(45), plac
 insert into airport_details value(1, 'Kempegowda','bangalore',10);
 insert into airport_details value(2, 'Hassan','hasana',9);
 insert into airport_details value(3, 'Mysuru','mysuru',10);
+insert into airport_details value(3, 'Mysuru','mysuru',10);
+insert into airport_details value(4, 'Kempegowda','bangalore',10);
 
 select * from airport_details;
 select name,place from airport_details;
