@@ -17,7 +17,11 @@ select * from passenger;
 select * from passenger where p_id = 4;
 select p_name,p_contact from passenger;
 select * from passenger group by p_address;
+
 select * from passenger right join airport_details on a_id = id;
+select * from passenger left join airport_details on a_id = id;
+select * from passenger full join airport_details on a_id = id;
+select * from passenger inner join airport_details on a_id = id;
 
 update passenger set p_address = "bangalore" where p_id = 4;
 
