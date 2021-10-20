@@ -77,21 +77,21 @@ public class MarketDetailsDAOImpl implements MarketDetailsDAO{
 	}
 
 	@Override
-	public boolean displayOne(MarketDetailsDTO dto) {
+	public boolean displaybylocation(String name) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/wolken","root","prsd@8197");
 			ps = con.prepareStatement("SELECT * FROM market_details WHERE location=?");
-			ps.setString(1, dto.getLocation());
+			ps.setString(1, name);
 			ResultSet rs = ps.executeQuery();
 			System.out.println("Id\t Name \t\t Location \t\t Number of shop");
 			System.out.println("-------------------------------------------------------------------------");
 			while(rs.next()) {
 				int id = rs.getInt(1);
-				String name = rs.getString(2);
+				String sname = rs.getString(2);
 				String location = rs.getString(3);
 				int shops = rs.getInt(4);
-				System.out.println(id+"\t"+name+"\t"+location+ "\t\t  "+ shops);
+				System.out.println(id+"\t"+sname+"\t"+location+ "\t\t  "+ shops);
 				result=true;
 			}
 			
@@ -109,14 +109,14 @@ public class MarketDetailsDAOImpl implements MarketDetailsDAO{
 	}
 
 	@Override
-	public boolean update(MarketDetailsDTO dto) {
+	public boolean updatebyname(String name,int shops) {
 	
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/wolken","root","prsd@8197");
 			ps = con.prepareStatement("UPDATE market_details SET noOfShops=? WHERE name=?");
-			ps.setInt(1, dto.getNoOfShop());
-			ps.setString(2, dto.getName());
+			ps.setInt(1, shops);
+			ps.setString(2, name);
 			
 			result = ps.execute();
 			
@@ -140,13 +140,13 @@ public class MarketDetailsDAOImpl implements MarketDetailsDAO{
 	}
 
 	@Override
-	public boolean delete(MarketDetailsDTO dto) {
+	public boolean deletebyId(int id) {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/wolken","root","prsd@8197");
 			ps = con.prepareStatement("DELETE FROM market_details WHERE id=?");
-			ps.setInt(1, dto.getId());
+			ps.setInt(1, id);
 			result = ps.execute();
 			
 			if(result) {

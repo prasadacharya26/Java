@@ -8,10 +8,10 @@ public interface MarketDetailsDAO {
 
 	void displayAll();
 
-	boolean displayOne(MarketDetailsDTO dto);
+	boolean displaybylocation(String name);
 
-	boolean update(MarketDetailsDTO dto);
+	boolean updatebyname(String name,int shops);
 
-	boolean delete(MarketDetailsDTO dto);
+	boolean deletebyId(int id);
 	
 }
