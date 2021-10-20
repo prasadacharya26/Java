@@ -16,8 +16,8 @@ public class MarketDetailTester {
 			System.out.println("1.Save");
 			System.out.println("2.Display All");
 			System.out.println("3.Display By Location");
-			System.out.println("4.Update");
-			System.out.println("5.Delete");
+			System.out.println("4.Update By Name");
+			System.out.println("5.Delete By Id");
 			System.out.println("Enter your choice:");
 			int ch = sc.nextInt();
 			
@@ -51,8 +51,8 @@ public class MarketDetailTester {
 				sc.nextLine();
 				System.out.println("Enter Market Location");
 				String loaction = sc.nextLine();
-				dto.setLocation(loaction);
-				boolean found = dao.displayOne(dto);
+				
+				boolean found = dao.displaybylocation(loaction);
 				if(found) {
 					System.out.println("Data Found");
 				}else {
@@ -66,10 +66,7 @@ public class MarketDetailTester {
 				System.out.println("Enter Market Number of shops");
 				int shops = sc.nextInt();
 				
-				dto.setName(name);
-				dto.setNoOfShop(shops);
-				
-				boolean isUpdated = dao.update(dto);
+				boolean isUpdated = dao.updatebyname(name,shops);
 				if(isUpdated) {
 					System.out.println("Data Updated");
 				}else {
@@ -80,8 +77,7 @@ public class MarketDetailTester {
 				System.out.println("Enter Market Id");
 				int id = sc.nextInt();
 				
-				dto.setId(id);
-				boolean isDeleted = dao.delete(dto);
+				boolean isDeleted = dao.deletebyId(id);
 				if(isDeleted) {
 					System.out.println("Data Deleted");
 				}else {
