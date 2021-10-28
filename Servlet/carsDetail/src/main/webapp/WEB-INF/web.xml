@@ -1,0 +1,88 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  	<servlet-name>tata</servlet-name>
+  	<servlet-class>com.wolken.car.TataServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>skoda</servlet-name>
+  	<servlet-class>com.wolken.car.SkodaServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>mgmotor</servlet-name>
+  	<servlet-class>com.wolken.car.MGMotorServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>benz</servlet-name>
+  	<servlet-class>com.wolken.car.BenzServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>kia</servlet-name>
+  	<servlet-class>com.wolken.car.KiaServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>jaguar</servlet-name>
+  	<servlet-class>com.wolken.car.JaguarServlet</servlet-class>
+  </servlet>
+  
+   <servlet>
+  	<servlet-name>bmw</servlet-name>
+  	<servlet-class>com.wolken.car.BMWServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>marutisuzuki</servlet-name>
+  	<servlet-class>com.wolken.car.MarutiSuzukiServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>marutisuzuki</servlet-name>
+  	<url-pattern>/marutisuzuki cars</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  	<servlet-name>bmw</servlet-name>
+  	<url-pattern>/bmw cars</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  	<servlet-name>jaguar</servlet-name>
+  	<url-pattern>/jaguar cars</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>tata</servlet-name>
+  	<url-pattern>/tata cars</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>skoda</servlet-name>
+  	<url-pattern>/skoda cars</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  	<servlet-name>mgmotor</servlet-name>
+  	<url-pattern>/mgMotor cars</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  	<servlet-name>benz</servlet-name>
+  	<url-pattern>/benz cars</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>kia</servlet-name>
+  	<url-pattern>/kia cars</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
