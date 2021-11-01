@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="">
+        <nav class="navbar navbar-light bg-primary justify-content-between  fixed-top">
+            <h3>Facebook</h3>
+            <form action="facebookLogin.html" class="form-inline">
+              <button class="btn  btn-dark" type="submit">Login</button>
+            </form>
+          </nav>
+    </div>
+    
+    <div class="container register-form">
+        <div class="row ">
+            <div class="col-md-3 col-12">
+
+                <img src="https://storage.googleapis.com/businessinfo_cz/2019/12/687a7f46-psc-b7-registration-legal-form-bus-500.png" alt="">
+            </div>
+            <div class="col-md-9 col-12 border">
+                <h3 class="head-space">Registration</h3>
+                <form action="register" method="post">
+                    <div class="row">
+                        <div class="col-4"><label>Full name</label></div>
+                        <div class="col"><input type="text" class="form-control form-control-sm" id="username" name="name" placeholder="Enter your name" onblur="validateName()"></div>
+                        <div class="col"><label class="color-valid" id="nameValid"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>Email</label></div>
+                        <div class="col"><input type="email" class="form-control form-control-sm" id="email"  name="email" placeholder="Enter your email" onblur="validateEmail()"></div>
+                        <div class="col"><label class="color-valid" id="emailValid"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>Contact Number</label></div>
+                        <div class="col"><input type="tel" class="form-control form-control-sm" id="contact" name="phone" placeholder="Enter your contact number" onblur="validateContact()"></div>
+                        <div class="col"><label class="color-valid" id="contactValid"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>Date of birth</label></div>
+                        <div class="col"><input type="date" class="form-control form-control-sm" id="date" name="dob" placeholder="Date of birth" onblur="validateDate()"></div>
+                        <div class="col"><label class="color-valid" id="dateValid"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>Gender</label></div>
+                            <div class="col">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="contactChoice1">Male</label>
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="contactChoice2">Female</label>
+                                <input type="radio" id="others" name="gender" value="others">
+                                <label for="contactChoice3">Others</label><br>
+                            </div>   
+                            <div class="col"><label class="color-valid" id="genderValid"></label></div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>Status</label></div>
+                        <div class="col">
+                            <input type="checkbox" id="relationship1" name="status" value="single">
+                            <label for="relationship1"> Single</label>
+                            <input type="checkbox" id="relationship2" name="status" value="married">
+                            <label for="relationship2"> Married</label>
+                            <input type="checkbox" id="relationship3" name="status" value="divorced">
+                            <label for="relationship3"> Divorced</label><br>
+                        </div>    
+                        <div class="col"><label class="color-valid" id="statusValid"></label></div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>City</label></div>
+                        <div class="col"><input type="text" class="form-control form-control-sm" name="city" id="city" placeholder="Enter your city" onblur="validateCity()"></div>
+                        <div class="col"><label class="color-valid"  id="cityValid"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>Nationality</label></div>
+                        <div class="col"><select id="country" name="country" class="form-control form-control-sm">
+                            <option value="">Select your city</option>
+                            <option value="india">India</option>
+                            <option value="england">England</option>
+                            <option value="usa">USA</option>
+                          </select>
+                        </div>
+                        <div class="col"><label class="color-valid" id="countryValid"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>Password</label></div>
+                        <div class="col"><input type="password" name="password" class="form-control form-control-sm" id="password" placeholder="Enter password" onblur="validatePassword()"></div>
+                        <div class="col"><label class="color-valid" id="passwordValid"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label>Confirm Password</label></div>
+                        <div class="col"><input type="password" name="cnfpassword" class="form-control form-control-sm" id="cnfpassword" placeholder="Confirm Password" onblur="validateCnfPassword()"></div>
+                        <div class="col"><label class="color-valid" id="cnfpasswordValid"></label></div>
+                    </div>
+                    <div class="row bottom">
+                        <div class="col-6"><button type="submit" class="btn btn-outline-success size" >Register</button></div>
+                        <div class="col-5"><button type="reset" class="btn btn-outline-info size">Reset</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer footer bg-dark">
+        <h6 class="font">@Copyright Reserved 2021</h6>
+      </div>
+</body>
+</html>
