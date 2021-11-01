@@ -12,11 +12,11 @@ public class FizzServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String coke = req.getParameter("fizz");
+		String name = req.getParameter("fizz");
 		resp.setContentType("text/html");   
-		if(!coke.isEmpty()) {
-			RequestDispatcher rs = req.getRequestDispatcher("fizza.html");
-			rs.include(req,resp);
+		if(!name.isEmpty()) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("fizza.html");
+			dispatcher.include(req,resp);
 		}
 	}	
 }

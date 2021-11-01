@@ -12,11 +12,11 @@ public class MaazaServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String coke = req.getParameter("maaza");
+		String name = req.getParameter("maaza");
 		resp.setContentType("text/html");   
-		if(!coke.isEmpty()) {
-			RequestDispatcher rs = req.getRequestDispatcher("maaza.html");
-			rs.include(req,resp);
+		if(!name.isEmpty()) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("maaza.html");
+			dispatcher.include(req,resp);
 		}
 	}	
 }

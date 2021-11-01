@@ -12,11 +12,11 @@ public class SliceServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String coke = req.getParameter("slice");
+		String name = req.getParameter("slice");
 		resp.setContentType("text/html");   
-		if(!coke.isEmpty()) {
-			RequestDispatcher rs = req.getRequestDispatcher("slice.html");
-			rs.include(req,resp);
+		if(!name.isEmpty()) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("slice.html");
+			dispatcher.include(req,resp);
 		}
 	}	
 }

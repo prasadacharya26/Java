@@ -12,11 +12,11 @@ public class PepsiServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String coke = req.getParameter("pepsi");
+		String name = req.getParameter("pepsi");
 		resp.setContentType("text/html");   
-		if(!coke.isEmpty()) {
-			RequestDispatcher rs = req.getRequestDispatcher("pepsi.html");
-			rs.include(req,resp);
+		if(!name.isEmpty()) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("pepsi.html");
+			dispatcher.include(req,resp);
 		}
 	}	
 }

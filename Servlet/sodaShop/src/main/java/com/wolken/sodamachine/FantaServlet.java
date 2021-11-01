@@ -12,11 +12,11 @@ public class FantaServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String coke = req.getParameter("fanta");
+		String name = req.getParameter("fanta");
 		resp.setContentType("text/html");   
-		if(!coke.isEmpty()) {
-			RequestDispatcher rs = req.getRequestDispatcher("fanta.html");
-			rs.include(req,resp);
+		if(!name.isEmpty()) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("fanta.html");
+			dispatcher.include(req,resp);
 		}
 	}	
 }

@@ -12,11 +12,11 @@ public class ThumsupServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String coke = req.getParameter("thums-up");
+		String name = req.getParameter("thums-up");
 		resp.setContentType("text/html");   
-		if(!coke.isEmpty()) {
-			RequestDispatcher rs = req.getRequestDispatcher("thumsup.html");
-			rs.include(req,resp);
+		if(!name.isEmpty()) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("thumsup.html");
+			dispatcher.include(req,resp);
 		}
 	}	
 }

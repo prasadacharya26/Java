@@ -15,8 +15,8 @@ public class IndexServlet extends HttpServlet{
 		String name = req.getParameter("home");
 		resp.setContentType("text/html");   
 		if(!name.isEmpty()) {
-			RequestDispatcher rs = req.getRequestDispatcher("index.html");
-			rs.include(req,resp);
+			RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
+			dispatcher.include(req,resp);
 		}
 	}	
 }

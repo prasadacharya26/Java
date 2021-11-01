@@ -12,11 +12,11 @@ public class CocaColaServlet  extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String coke = req.getParameter("coc");
+		String name = req.getParameter("coc");
 		resp.setContentType("text/html");   
-		if(!coke.isEmpty()) {
-			RequestDispatcher rs = req.getRequestDispatcher("cocacola.html");
-			rs.include(req,resp);
+		if(!name.isEmpty()) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("cocacola.html");
+			dispatcher.include(req,resp);
 		}
 	}	
 }
