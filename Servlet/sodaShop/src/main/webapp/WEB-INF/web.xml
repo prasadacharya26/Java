@@ -1,0 +1,118 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+   <servlet>
+  	<servlet-name>cocacola</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.CocaColaServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>fanta</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.FantaServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>fizz</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.FizzServlet</servlet-class>
+  </servlet>
+  
+   <servlet>
+  	<servlet-name>maaza</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.MaazaServlet</servlet-class>
+  </servlet>
+  
+   <servlet>
+  	<servlet-name>mountain</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.MountainServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>pepsi</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.PepsiServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>savenup</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.SavenupServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>slice</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.SliceServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>sprite</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.SpriteServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>thumsup</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.ThumsupServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>index</servlet-name>
+  	<servlet-class>com.wolken.sodamachine.IndexServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>index</servlet-name>
+  	<url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>thumsup</servlet-name>
+  	<url-pattern>/thums-up</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>sprite</servlet-name>
+  	<url-pattern>/sprite</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>slice</servlet-name>
+  	<url-pattern>/slice</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>savenup</servlet-name>
+  	<url-pattern>/saven-up</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>pepsi</servlet-name>
+  	<url-pattern>/pepsi</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>mountain</servlet-name>
+  	<url-pattern>/mountain</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>maaza</servlet-name>
+  	<url-pattern>/maaza</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  	<servlet-name>fizz</servlet-name>
+  	<url-pattern>/fizz</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>fanta</servlet-name>
+  	<url-pattern>/fanta</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  	<servlet-name>cocacola</servlet-name>
+  	<url-pattern>/coca-cola</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
