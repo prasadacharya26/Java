@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+    
+    <bean id="name" class="com.wolken.laptop.DI.Laptop">
+    </bean>
+    
+    <bean id="details" class="com.wolken.laptop.DI.Laptop">
+    	<constructor-arg value="HP"></constructor-arg>
+    	<constructor-arg value="60000" type="int"></constructor-arg>
+    	<constructor-arg ref="about"></constructor-arg>
+    </bean>
+    
+    <bean id="about" class="com.wolken.laptop.DI.Features">
+    	<property name="processor" value="Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz2.11 GHz"></property>
+    	<property name="ram" value="16"></property>
+    	
+    </bean>
+    
+   </beans>

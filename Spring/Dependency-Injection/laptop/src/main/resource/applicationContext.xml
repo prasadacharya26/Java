@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+    
+    <bean id="name" class="com.wolken.olympic.DI.Olympics">
+    </bean>
+    
+    <bean id="details" class="com.wolken.olympic.DI.Olympics">
+    	<constructor-arg value="Tokyo"></constructor-arg>
+    	<constructor-arg value="Japan"></constructor-arg>
+    	<constructor-arg value="2020" type="int"></constructor-arg>
+    	<constructor-arg ref="country"></constructor-arg>
+    </bean>
+    
+    <bean id="country" class="com.wolken.olympic.DI.Country">
+    	<property name="name" value="India"></property>
+    	<property name="medal" value="10"></property>
+    	<property name="rank" value="3"></property>
+    </bean>
+    
+   </beans>
