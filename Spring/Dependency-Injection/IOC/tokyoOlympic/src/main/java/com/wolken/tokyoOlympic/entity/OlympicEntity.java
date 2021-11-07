@@ -21,7 +21,7 @@ public class OlympicEntity {
 	@Id
 	private int id;
 	private String countryName;
-	private int rank;
+	private int position;
 	private int gold;
 	private int silver;
 	private int bronze;

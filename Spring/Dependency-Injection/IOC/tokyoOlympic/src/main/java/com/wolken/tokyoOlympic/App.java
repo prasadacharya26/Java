@@ -32,7 +32,7 @@ public class App
     		OlympicDTO dto=new OlympicDTO();
     		dto.setId(id);
     		dto.setCountryName(name);
-    		dto.setRank(rank);
+    		dto.setPosition(rank);
     		dto.setGold(gold);
     		dto.setSilver(silver);
     		dto.setBronze(bronze);

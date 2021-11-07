@@ -11,7 +11,7 @@ public class OlympicServiceImpl implements OlympicService {
 	public String validateandsave(OlympicDTO dto) {
 		if(dto.getId()>0) {
   			if(!dto.getCountryName().equals(null) && !dto.getCountryName().equals("")) {
-  				if(dto.getRank()>0) {
+  				if(dto.getPosition()>0) {
   					if(dto.getGold()>=0) {
   						if(dto.getSilver()>=0) {
   							if(dto.getBronze()>=0) {
@@ -19,7 +19,7 @@ public class OlympicServiceImpl implements OlympicService {
   		  						OlympicEntity entity=new OlympicEntity();
   		  						entity.setId(dto.getId());
   		  						entity.setCountryName(dto.getCountryName());
-  		  						entity.setRank(dto.getRank());
+  		  						entity.setPosition(dto.getPosition());
   		  						entity.setGold(dto.getGold());
   		  						entity.setSilver(dto.getSilver());
   		  						entity.setBronze(dto.getBronze());
