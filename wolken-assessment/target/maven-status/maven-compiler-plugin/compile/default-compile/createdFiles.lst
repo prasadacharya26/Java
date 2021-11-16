@@ -1,0 +1,7 @@
+com\wolken\wolkenassessment\entity\UserEntity.class
+com\wolken\wolkenassessment\WolkenAssessmentApplication.class
+com\wolken\wolkenassessment\dto\UserDTO.class
+com\wolken\wolkenassessment\service\UserService.class
+com\wolken\wolkenassessment\repository\UserRepository.class
+com\wolken\wolkenassessment\controller\UserController.class
+com\wolken\wolkenassessment\service\UserServiceImpl.class
